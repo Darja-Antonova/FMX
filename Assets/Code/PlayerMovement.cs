@@ -44,6 +44,10 @@ public class PlayerMovement : MonoBehaviour
         InteractAction.Disable();
     }
 
+    private void Awake()
+    {
+        enabled = true;
+    }
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
