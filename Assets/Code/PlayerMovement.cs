@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 groundCheckOffset = new Vector2(0f, -0.5f);
     public LayerMask groundLayer;
     private bool isFacingRight = true;
+    public bool isInteracting = false;
 
     public Rigidbody2D rb;
     private float horizInput;
@@ -24,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
     public InputAction MoveAction;
     public InputAction JumpAction;
+    public InputAction InteractAction;
 
     private float smoothedInput;
 
@@ -31,12 +34,14 @@ public class PlayerMovement : MonoBehaviour
     {
         MoveAction.Enable();
         JumpAction.Enable();
+        InteractAction.Enable();
     }
 
     void OnDisable()
     {
         MoveAction.Disable();
         JumpAction.Disable();
+        InteractAction.Disable();
     }
 
     void Start()
@@ -65,6 +70,11 @@ public class PlayerMovement : MonoBehaviour
         {
             //AudioManager.Instance.PlaySFX(AudioManager.Instance.jumpSFX);
             jumpTimer = Time.time + jumpDelay;
+        }
+
+        if (InteractAction.WasPressedThisFrame())
+        {
+            StartCoroutine("Interacting");
         }
 
         //Update animator parameters
@@ -124,5 +134,12 @@ public class PlayerMovement : MonoBehaviour
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
+    }
+
+    IEnumerator Interacting()
+    {
+        isInteracting = true;
+        yield return new WaitForSeconds(1);
+        isInteracting = false;
     }
 }
