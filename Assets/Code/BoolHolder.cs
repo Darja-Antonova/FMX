@@ -9,6 +9,22 @@ public class BoolHolder : MonoBehaviour
     public bool door3;
     public bool door4;
 
+    public bool BarberOne;
+    public bool BarberTwo;
+    public bool BarberThree;
+
+    public bool BodyOne;
+    public bool BodyTwo;
+    public bool BodyThree;
+
+    public bool PersOne;
+    public bool PersTwo;
+    public bool PersThree;
+
+    public bool HobbyOne;
+    public bool HobbyTwo;
+    public bool HobbyThree;
+
     private void Awake()
     {
         if (Instance != null)

@@ -668,9 +668,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a031e365603f4f43a2fdb142a8f751f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectCollect
-  BarberOne: 0
-  BarberTwo: 0
-  BarberThree: 0
   Buttons: {fileID: 1182229998}
   ItemOne: {fileID: 1986984533}
   ItemTwo: {fileID: 964705434}
@@ -775,7 +772,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 505233306}
         m_TargetAssemblyTypeName: ObjectCollect, Assembly-CSharp
-        m_MethodName: ThirdObject
+        m_MethodName: ThirdObject2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -972,7 +969,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 505233306}
         m_TargetAssemblyTypeName: ObjectCollect, Assembly-CSharp
-        m_MethodName: FirstObject
+        m_MethodName: FirstObject2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1271,7 +1268,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 505233306}
         m_TargetAssemblyTypeName: ObjectCollect, Assembly-CSharp
-        m_MethodName: SecondObject
+        m_MethodName: SecondObject2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
