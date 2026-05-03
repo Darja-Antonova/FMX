@@ -7,6 +7,7 @@ public class DoorScript3 : MonoBehaviour
     public GameObject FadeIn;
 
     public PlayerMovement playerMovement;
+    public GameObject player;
 
     public DoorScript2 door;
 
@@ -15,6 +16,7 @@ public class DoorScript3 : MonoBehaviour
         if (collision.CompareTag("Player") && playerMovement.isInteracting && BoolHolder.Instance.door3 == false && BoolHolder.Instance.door2 == true)
         {
             playerMovement.enabled = false;
+            BoolHolder.Instance.tempPos = player.transform.position;
             FadeIn.SetActive(true);
             StartCoroutine("LoadShop");
             BoolHolder.Instance.door3 = true;

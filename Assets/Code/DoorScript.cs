@@ -7,12 +7,14 @@ public class DoorScript : MonoBehaviour
     public GameObject FadeIn;
 
     public PlayerMovement playerMovement;
+    public GameObject player;
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") && playerMovement.isInteracting && BoolHolder.Instance.door1 == false)
         {
             playerMovement.enabled = false;
+            BoolHolder.Instance.tempPos = player.transform.position;
             FadeIn.SetActive(true);
             StartCoroutine("LoadShop");
             BoolHolder.Instance.door1 = true;

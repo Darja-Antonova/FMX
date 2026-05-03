@@ -235,7 +235,7 @@ Transform:
   m_GameObject: {fileID: 237016391}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.09, y: -2.18, z: -10}
+  m_LocalPosition: {x: -5, y: -2.2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -350,7 +350,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1299956537}
-  - {fileID: 1183207206}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &307291236
@@ -562,6 +561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorScript2
   FadeIn: {fileID: 527182656}
   playerMovement: {fileID: 1083380082}
+  player: {fileID: 1083380079}
   door: {fileID: 1786214746}
 --- !u!1 &527182656
 GameObject:
@@ -706,6 +706,7 @@ MonoBehaviour:
   HobbyOne: 0
   HobbyTwo: 0
   HobbyThree: 0
+  tempPos: {x: -5, y: -3.2}
 --- !u!4 &546010352
 Transform:
   m_ObjectHideFlags: 0
@@ -1165,7 +1166,7 @@ Transform:
   m_GameObject: {fileID: 1083380079}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.09, y: -3.18, z: 0}
+  m_LocalPosition: {x: -5, y: -3.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1489,11 +1490,11 @@ Transform:
   m_GameObject: {fileID: 1183207203}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.56, y: 3.55, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 269915813}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1251828225 stripped
 Transform:
@@ -3195,7 +3196,7 @@ Transform:
   m_GameObject: {fileID: 1854362921}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.09, y: -2.18, z: -10}
+  m_LocalPosition: {x: -5, y: -2.2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3227,6 +3228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorScript3
   FadeIn: {fileID: 527182656}
   playerMovement: {fileID: 1083380082}
+  player: {fileID: 1083380079}
   door: {fileID: 367961820}
 --- !u!1 &1941929549 stripped
 GameObject:
@@ -3252,6 +3254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorScript4
   FadeIn: {fileID: 527182656}
   playerMovement: {fileID: 1083380082}
+  player: {fileID: 1083380079}
   door: {fileID: 1892576536}
 --- !u!1 &2037545922
 GameObject:
@@ -3478,6 +3481,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 527182656}
     - target: {fileID: 125498970776353799, guid: 69d9b0af177304e45bfd01076e7cce49, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1083380079}
+    - target: {fileID: 125498970776353799, guid: 69d9b0af177304e45bfd01076e7cce49, type: 3}
       propertyPath: playerMovement
       value: 
       objectReference: {fileID: 1083380082}
@@ -3542,3 +3549,4 @@ SceneRoots:
   - {fileID: 2095443520}
   - {fileID: 546010352}
   - {fileID: 269915813}
+  - {fileID: 1183207206}

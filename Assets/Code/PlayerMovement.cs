@@ -53,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         gravity = rb.gravityScale;
+        gameObject.transform.position = BoolHolder.Instance.tempPos;
     }
 
     void Update()

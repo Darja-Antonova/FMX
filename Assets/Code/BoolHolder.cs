@@ -25,6 +25,8 @@ public class BoolHolder : MonoBehaviour
     public bool HobbyTwo;
     public bool HobbyThree;
 
+    public Vector2 tempPos;
+
     private void Awake()
     {
         if (Instance != null)
