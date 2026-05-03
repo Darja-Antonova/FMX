@@ -377,15 +377,15 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.39270836
     y: 0
-    width: 1
-    height: 1
+    width: 0.6592593
+    height: 0.65925926
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.21875
+  orthographic size: 11
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -772,7 +772,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 505233306}
         m_TargetAssemblyTypeName: ObjectCollect, Assembly-CSharp
-        m_MethodName: ThirdObject3
+        m_MethodName: ThirdObject4
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -969,7 +969,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 505233306}
         m_TargetAssemblyTypeName: ObjectCollect, Assembly-CSharp
-        m_MethodName: FirstObject3
+        m_MethodName: FirstObject4
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1268,7 +1268,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 505233306}
         m_TargetAssemblyTypeName: ObjectCollect, Assembly-CSharp
-        m_MethodName: SecondObject3
+        m_MethodName: SecondObject4
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

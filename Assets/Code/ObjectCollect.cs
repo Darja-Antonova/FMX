@@ -9,37 +9,6 @@ public class ObjectCollect : MonoBehaviour
     public GameObject ItemOne;
     public GameObject ItemTwo;
     public GameObject ItemThree;
-
-    public void FirstObject1()
-    {
-        BoolHolder.Instance.BarberOne = true;
-        ItemOne.SetActive(false);
-        Buttons.SetActive(false);
-        StartCoroutine("ExitShop1");
-    }
-
-    public void SecondObject1()
-    {
-        BoolHolder.Instance.BarberTwo = true;
-        ItemTwo.SetActive(false);
-        Buttons.SetActive(false);
-        StartCoroutine("ExitShop1");
-    }
-
-    public void ThirdObject1()
-    {
-        BoolHolder.Instance.BarberThree = true;
-        ItemThree.SetActive(false);
-        Buttons.SetActive(false);
-        StartCoroutine("ExitShop1");
-    }
-
-    IEnumerator ExitShop1()
-    {
-        yield return new WaitForSeconds(2);
-        SceneManager.LoadScene(1);
-    }
-
     public void FirstObject2()
     {
         BoolHolder.Instance.BodyOne = true;

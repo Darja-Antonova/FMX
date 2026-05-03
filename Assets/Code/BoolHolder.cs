@@ -7,11 +7,6 @@ public class BoolHolder : MonoBehaviour
     public bool door1;
     public bool door2;
     public bool door3;
-    public bool door4;
-
-    public bool BarberOne;
-    public bool BarberTwo;
-    public bool BarberThree;
 
     public bool BodyOne;
     public bool BodyTwo;
