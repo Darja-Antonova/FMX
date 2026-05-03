@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ObjectCollect : MonoBehaviour
 {
@@ -16,6 +18,7 @@ public class ObjectCollect : MonoBehaviour
         BarberOne = true;
         ItemOne.SetActive(false);
         Buttons.SetActive(false);
+        StartCoroutine("ExitShop");
     }
 
     public void SecondObject()
@@ -23,6 +26,7 @@ public class ObjectCollect : MonoBehaviour
         BarberTwo = true;
         ItemTwo.SetActive(false);
         Buttons.SetActive(false);
+        StartCoroutine("ExitShop");
     }
 
     public void ThirdObject()
@@ -30,5 +34,12 @@ public class ObjectCollect : MonoBehaviour
         BarberThree = true;
         ItemThree.SetActive(false);
         Buttons.SetActive(false);
+        StartCoroutine("ExitShop");
+    }
+
+    IEnumerator ExitShop()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(1);
     }
 }

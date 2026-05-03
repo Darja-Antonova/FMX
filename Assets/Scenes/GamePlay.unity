@@ -284,7 +284,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorScript2
   FadeIn: {fileID: 527182656}
   playerMovement: {fileID: 1083380082}
-  door2: 0
   door: {fileID: 1786214746}
 --- !u!1 &527182656
 GameObject:
@@ -384,6 +383,54 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &546010350
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 546010352}
+  - component: {fileID: 546010351}
+  m_Layer: 0
+  m_Name: BoolHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &546010351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546010350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78411231fa414324d860325b089ccee4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoolHolder
+  door1: 0
+  door2: 0
+  door3: 0
+  door4: 0
+--- !u!4 &546010352
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546010350}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 384.8519, y: 282.3044, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &589231082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2572,7 +2619,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 11
+  orthographic size: 4.21875
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -2628,7 +2675,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorScript3
   FadeIn: {fileID: 527182656}
   playerMovement: {fileID: 1083380082}
-  door3: 0
   door: {fileID: 367961820}
 --- !u!1 &1941929549 stripped
 GameObject:
@@ -2654,7 +2700,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorScript4
   FadeIn: {fileID: 527182656}
   playerMovement: {fileID: 1083380082}
-  door4: 0
   door: {fileID: 1892576536}
 --- !u!1 &2037545922
 GameObject:
@@ -2842,3 +2887,4 @@ SceneRoots:
   - {fileID: 1083380081}
   - {fileID: 1183207206}
   - {fileID: 2095443520}
+  - {fileID: 546010352}

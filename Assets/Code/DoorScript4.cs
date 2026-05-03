@@ -8,16 +8,16 @@ public class DoorScript4 : MonoBehaviour
 
     public PlayerMovement playerMovement;
 
-    public bool door4 = false;
     public DoorScript3 door;
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && playerMovement.isInteracting && door4 == false && door.door3 == true)
+        if (collision.CompareTag("Player") && playerMovement.isInteracting && BoolHolder.Instance.door4 == false && BoolHolder.Instance.door3 == true)
         {
             playerMovement.enabled = false;
             FadeIn.SetActive(true);
             StartCoroutine("LoadShop");
+            BoolHolder.Instance.door4 = true;
         }
     }
 
