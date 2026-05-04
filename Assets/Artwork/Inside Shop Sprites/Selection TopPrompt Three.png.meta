@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d820cfaeff7da47469734d069ad7bca4
+guid: ecc205f04dd866544b29ebd0cb870396
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3488504987352883813
-    second: Selection TopPrompt One_0
+      213: 3084083344964690446
+    second: Selection TopPrompt Three_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Selection TopPrompt One_0
+      name: Selection TopPrompt Three_0
       rect:
         serializedVersion: 2
         x: 278
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 562e8589dc8a96030800000000000000
-      internalID: 3488504987352883813
+      spriteID: e02a15a467ddcca20800000000000000
+      internalID: 3084083344964690446
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Selection TopPrompt One_0: 3488504987352883813
+      Selection TopPrompt Three_0: 3084083344964690446
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

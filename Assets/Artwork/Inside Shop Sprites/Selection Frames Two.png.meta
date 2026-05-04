@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: d820cfaeff7da47469734d069ad7bca4
+guid: 2077989ed1cb92f458a919c0c5f71113
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3488504987352883813
-    second: Selection TopPrompt One_0
+      213: -4087738697509464068
+    second: Selection Frames Two_0
+  - first:
+      213: -7580814200075518152
+    second: Selection Frames Two_1
+  - first:
+      213: 9131910820856738807
+    second: Selection Frames Two_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +119,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Selection TopPrompt One_0
+      name: Selection Frames Two_0
       rect:
         serializedVersion: 2
-        x: 278
-        y: 442
-        width: 413
-        height: 63
+        x: 102
+        y: 102
+        width: 228
+        height: 327
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 562e8589dc8a96030800000000000000
-      internalID: 3488504987352883813
+      spriteID: cf79458ff4f6547c0800000000000000
+      internalID: -4087738697509464068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Selection Frames Two_1
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 105
+        width: 227
+        height: 323
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83ff24066a98bc690800000000000000
+      internalID: -7580814200075518152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Selection Frames Two_2
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 97
+        width: 224
+        height: 330
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f336b532801bbe70800000000000000
+      internalID: 9131910820856738807
       vertices: []
       indices: 
       edges: []
@@ -138,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: dd13e737bd9ef554fa1ae0a2cce5d4ec
     internalID: 0
     vertices: []
     indices: 
@@ -146,9 +196,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Selection TopPrompt One_0: 3488504987352883813
+      Selection Frames Two_0: -4087738697509464068
+      Selection Frames Two_1: -7580814200075518152
+      Selection Frames Two_2: 9131910820856738807
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

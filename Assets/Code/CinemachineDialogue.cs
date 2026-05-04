@@ -13,10 +13,12 @@ public class CinemachineDialogue : MonoBehaviour
 
     public PlayerMovement playerMovement;
     public GameObject textBox;
+    public GameObject FadeOut;
 
     void Start()
     {
         followComponent = cineCamera.GetComponent<CinemachineFollow>();
+        FadeOut.SetActive(true);
 
         if (followComponent != null)
         {

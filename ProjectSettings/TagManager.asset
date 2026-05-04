@@ -51,5 +51,8 @@ TagManager:
   - name: Picture
     uniqueID: 2479106569
     locked: 0
+  - name: Fade
+    uniqueID: 2320368237
+    locked: 0
   m_RenderingLayers:
   - Default

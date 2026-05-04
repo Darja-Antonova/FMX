@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: d820cfaeff7da47469734d069ad7bca4
+guid: ba3636637c2ff2049b7595b231674e20
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3488504987352883813
-    second: Selection TopPrompt One_0
+      213: 6318905717777776855
+    second: Selection Frames Three_0
+  - first:
+      213: 2789364728939835757
+    second: Selection Frames Three_1
+  - first:
+      213: -8679610053135241195
+    second: Selection Frames Three_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Selection TopPrompt One_0
+      name: Selection Frames Three_0
       rect:
         serializedVersion: 2
-        x: 278
-        y: 442
-        width: 413
-        height: 63
+        x: 101
+        y: 101
+        width: 230
+        height: 329
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 562e8589dc8a96030800000000000000
-      internalID: 3488504987352883813
+      spriteID: 7d04455754341b750800000000000000
+      internalID: 6318905717777776855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Selection Frames Three_1
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 104
+        width: 229
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6176793170d5b620800000000000000
+      internalID: 2789364728939835757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Selection Frames Three_2
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 96
+        width: 226
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 510f6f9a4a4db8780800000000000000
+      internalID: -8679610053135241195
       vertices: []
       indices: 
       edges: []
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Selection TopPrompt One_0: 3488504987352883813
+      Selection Frames Three_0: 6318905717777776855
+      Selection Frames Three_1: 2789364728939835757
+      Selection Frames Three_2: -8679610053135241195
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
