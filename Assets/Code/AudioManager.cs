@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
@@ -19,9 +21,15 @@ public class AudioManager : MonoBehaviour
     public AudioClip BFDialogue1;
     public AudioClip WitchDialogue1;
     public AudioClip WitchDialogue2;
+    public AudioClip WitchDialogue3;
+    public AudioClip WitchDialogue4;
     public AudioClip GirlDialogue1;
     public AudioClip GirlDialogue2;
     public AudioClip GirlDialogue3;
+
+    [Header("Volume Tracking")]
+    public float masterMusicVolume = 1f;
+    public AudioMixer mainMixer;
 
     private void Awake()
     {
@@ -56,6 +64,27 @@ public class AudioManager : MonoBehaviour
         else
         {
             PlayMusic(backgroundMusic);
+        }
+    }
+
+    public void DuckMusic(bool duck)
+    {
+        StopAllCoroutines();
+        float targetDb = duck ? -20f : Mathf.Log10(masterMusicVolume) * 20;
+        StartCoroutine(FadeMixer(targetDb, 0.5f));
+    }
+
+    private IEnumerator FadeMixer(float targetDb, float duration)
+    {
+        float currentTime = 0;
+        mainMixer.GetFloat("Music", out float startDb);
+
+        while (currentTime < duration)
+        {
+            currentTime += Time.deltaTime;
+            float newVol = Mathf.Lerp(startDb, targetDb, currentTime / duration);
+            mainMixer.SetFloat("Music", newVol);
+            yield return null;
         }
     }
 
@@ -102,5 +131,15 @@ public class AudioManager : MonoBehaviour
         {
             sfxSource.Stop();
         }
+    }
+
+    public void PlayVoice(AudioClip clip)
+    {
+        if (clip == null) return;
+
+        sfxSource.Stop();
+        sfxSource.clip = clip;
+        sfxSource.loop = false;
+        sfxSource.Play();
     }
 }

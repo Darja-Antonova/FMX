@@ -16,10 +16,17 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI speechText;
     private int currentDisplayingText = 0;
     public Button textBox;
-    [SerializeField] private GameObject dialoguePanel;
+    public GameObject dialoguePanel;
+    private bool isTyping = false;
+
+    [Header("Audio Settings")]
+    [SerializeField] private AudioClip[] dialogueClips;
+
+    [Header("Portrait Objects")]
+    [SerializeField] private GameObject[] portraitObjects;
+    private GameObject currentActivePortrait;
 
     public PlayerMovement playerMovement;
-
 
     public InputAction EnterAction;
 
@@ -35,36 +42,65 @@ public class DialogueManager : MonoBehaviour
 
     public void Update()
     {
-        GameObject selected = EventSystem.current.currentSelectedGameObject;
-
-        if (EnterAction.WasPressedThisFrame() && selected == textBox.gameObject)
+        if (dialoguePanel.activeInHierarchy && EnterAction.WasPressedThisFrame())
         {
-            textBox.onClick.Invoke();
+            ActivateText();
         }
     }
     public void ActivateText()
     {
+        if (isTyping)
+        {
+            StopAllCoroutines();
+            speechText.text = speech[currentDisplayingText];
+            currentDisplayingText++;
+            isTyping = false;
+            AudioManager.Instance.sfxSource.Stop();
+            return;
+        }
+
         if (currentDisplayingText >= speech.Length)
         {
             dialoguePanel.SetActive(false);
             playerMovement.enabled = true;
+            AudioManager.Instance.DuckMusic(false);
             return;
         }
 
-        StopAllCoroutines();
+        AudioManager.Instance.DuckMusic(true);
         StartCoroutine(AnimateText());
     }
 
     IEnumerator AnimateText()
     {
+        isTyping = true;
         speechText.text = "";
+
+        if (dialogueClips.Length > currentDisplayingText && dialogueClips[currentDisplayingText] != null)
+        {
+            AudioManager.Instance.PlayVoice(dialogueClips[currentDisplayingText]);
+        }
+
+        if (currentActivePortrait != null)
+        {
+            currentActivePortrait.SetActive(false);
+        }
+
+        if (portraitObjects.Length > currentDisplayingText && portraitObjects[currentDisplayingText] != null)
+        {
+            currentActivePortrait = portraitObjects[currentDisplayingText];
+            currentActivePortrait.SetActive(true);
+        }
+
         string currentLine = speech[currentDisplayingText];
 
-        for (int i = 0; i < speech[currentDisplayingText].Length + 1; i++)
+        foreach (char letter in currentLine.ToCharArray())
         {
-            speechText.text = speech[currentDisplayingText].Substring(0, i);
+            speechText.text += letter;
             yield return new WaitForSeconds(textSpeed);
         }
+
         currentDisplayingText++;
+        isTyping = false;
     }
 }

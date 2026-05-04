@@ -724,6 +724,7 @@ MonoBehaviour:
   audioMixer: {fileID: 24100000, guid: 9b1889002cc01e64a8f6ea453eb5ec95, type: 2}
   musicSlider: {fileID: 1018936412}
   SFXSlider: {fileID: 615271755}
+  dialogue: {fileID: 0}
 --- !u!1 &380593307
 GameObject:
   m_ObjectHideFlags: 0
@@ -890,11 +891,15 @@ MonoBehaviour:
   cauldronBubbleSFX: {fileID: 8300000, guid: 9d38fd48c632b874cba80a8f9cceca34, type: 3}
   cauldronDropSFX: {fileID: 8300000, guid: b4594dd71a97c374a9ee7373fd62de76, type: 3}
   BFDialogue1: {fileID: 8300000, guid: ef1f00fa611a5c84ead0688abe9f7f8f, type: 3}
-  WitchDialogue1: {fileID: 8300000, guid: 76a4ab5f19525454cbe9cfbf7ae1a34a, type: 3}
-  WitchDialogue2: {fileID: 8300000, guid: f27fa51a9b5a104409e3978f22c41f20, type: 3}
+  WitchDialogue1: {fileID: 8300000, guid: 24d3ad8ec2219514b993586609418456, type: 3}
+  WitchDialogue2: {fileID: 8300000, guid: b6d141366f7ad244189f50b0aec748a5, type: 3}
+  WitchDialogue3: {fileID: 8300000, guid: 36020fcf9c2bfd543a4fcd86323bc2b5, type: 3}
+  WitchDialogue4: {fileID: 8300000, guid: f27fa51a9b5a104409e3978f22c41f20, type: 3}
   GirlDialogue1: {fileID: 8300000, guid: b6743a1352c6f754e99acd41f7bea0f4, type: 3}
   GirlDialogue2: {fileID: 8300000, guid: 8ffe689a2c1b33b4c836e487ccd60917, type: 3}
   GirlDialogue3: {fileID: 8300000, guid: 94147a20fa67cb848b4e3fe9f9abeb8e, type: 3}
+  masterMusicVolume: 1
+  mainMixer: {fileID: 24100000, guid: 9b1889002cc01e64a8f6ea453eb5ec95, type: 2}
 --- !u!82 &434422350
 AudioSource:
   m_ObjectHideFlags: 0

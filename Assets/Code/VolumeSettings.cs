@@ -8,6 +8,8 @@ public class VolumeSettings : MonoBehaviour
     [SerializeField] private Slider musicSlider;
     [SerializeField] private Slider SFXSlider;
 
+    public DialogueManager dialogue;
+
     private void Start()
     {
         if (PlayerPrefs.HasKey("musicVolume"))
@@ -24,8 +26,23 @@ public class VolumeSettings : MonoBehaviour
     public void SetMusicVolume()
     {
         float volume = musicSlider.value;
-        audioMixer.SetFloat("Music", Mathf.Log10(volume) * 20);
         PlayerPrefs.SetFloat("musicVolume", volume);
+
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.masterMusicVolume = volume;
+        }
+
+        bool isTalking = false;
+        if (dialogue != null && dialogue.dialoguePanel != null)
+        {
+            isTalking = dialogue.dialoguePanel.activeInHierarchy;
+        }
+
+        if (!isTalking)
+        {
+            audioMixer.SetFloat("Music", Mathf.Log10(volume) * 20);
+        }
     }
 
     public void SetSFXVolume()
