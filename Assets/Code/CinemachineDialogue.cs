@@ -8,8 +8,11 @@ public class CinemachineDialogue : MonoBehaviour
     public float smoothSpeed = 5f;
 
     private CinemachineFollow followComponent;
+    private CinemachineCameraOffset cinemachineOffset;
     private Vector3 originalOffset;
     private Vector3 currentGoalOffset;
+
+    private Vector3 fullOffset;
 
     public PlayerMovement playerMovement;
     public GameObject textBox;
@@ -18,12 +21,15 @@ public class CinemachineDialogue : MonoBehaviour
     void Start()
     {
         followComponent = cineCamera.GetComponent<CinemachineFollow>();
+        cinemachineOffset = cineCamera.GetComponent<CinemachineCameraOffset>();
         FadeOut.SetActive(true);
+        fullOffset = new Vector3(followComponent.FollowOffset.x, followComponent.FollowOffset.y, followComponent.FollowOffset.z);
 
         if (followComponent != null)
         {
-            originalOffset = followComponent.FollowOffset;
-            currentGoalOffset = originalOffset;
+            originalOffset = cinemachineOffset.Offset;
+            currentGoalOffset = fullOffset;
+            print(currentGoalOffset);
         }
     }
 
@@ -52,7 +58,7 @@ public class CinemachineDialogue : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            currentGoalOffset = originalOffset;
+            currentGoalOffset = fullOffset;
         }
     }
 }

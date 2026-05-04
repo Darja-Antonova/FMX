@@ -1,7 +1,18 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Bfs : MonoBehaviour
 {
+
+    private bool bfSpawnable;
+    public GameObject ExplosionAnimation;
+    public AudioSource CauldronSound;
+    public AudioSource Explosion;
+    public AudioSource BFBeingDisgusting;
+
+
     public GameObject BF1;
     public GameObject BF2;
     public GameObject BF3;
@@ -30,8 +41,14 @@ public class Bfs : MonoBehaviour
     public GameObject BF26;
     public GameObject BF27;
 
+void Start()
+    {
+        bfSpawnable = false;
+    }
  void Update()
     {
+        if (bfSpawnable)
+        {
             if (BoolHolder.Instance.BodyOne && BoolHolder.Instance.PersOne && BoolHolder.Instance.HobbyOne == true)
             {
                 BF1.SetActive(true);
@@ -77,7 +94,7 @@ public class Bfs : MonoBehaviour
                 BF9.SetActive(true);
                 AudioManager.Instance.PlayVoice(AudioManager.Instance.BFDialogue1);
             }
-            if (BoolHolder.Instance.BodyOne && BoolHolder.Instance.PersOne && BoolHolder.Instance.HobbyOne == true)
+            if (BoolHolder.Instance.BodyOne && BoolHolder.Instance.PersOne && BoolHolder.Instance.HobbyTwo == true)
             {
                 BF10.SetActive(true);
                 AudioManager.Instance.PlayVoice(AudioManager.Instance.BFDialogue1);
@@ -167,5 +184,33 @@ public class Bfs : MonoBehaviour
                 BF27.SetActive(true);
                 AudioManager.Instance.PlayVoice(AudioManager.Instance.BFDialogue1);
             }
+        }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            CauldronSound.Play();
+            print("PlayerEntered");
+            StartCoroutine("PlayAnimation");
+            
+        }
+    }
+
+    IEnumerator PlayAnimation()
+    {
+        yield return new WaitForSeconds(1);
+        ExplosionAnimation.SetActive(true);
+        Explosion.Play();
+        StartCoroutine("SpawnBoyfriend");
+    }
+
+    IEnumerator SpawnBoyfriend()
+    {
+        yield return new WaitForSeconds(1);
+        bfSpawnable = true;
+        BFBeingDisgusting.Play();
+    }
+
 }

@@ -36,7 +36,7 @@ public class ObjectCollect : MonoBehaviour
         }
 
         imageOne.color = new Color32(255,255,225,100);
-        Buttons.SetActive(false);
+        //Buttons.SetActive(false);
         StartCoroutine("ExitShop2");
     }
 
@@ -50,7 +50,7 @@ public class ObjectCollect : MonoBehaviour
         }
 
         imageTwo.color = new Color32(255, 255, 225, 100);
-        Buttons.SetActive(false);
+        //Buttons.SetActive(false);
         StartCoroutine("ExitShop2");
     }
 
@@ -64,7 +64,7 @@ public class ObjectCollect : MonoBehaviour
         }
 
         imageThree.color = new Color32(255, 255, 225, 100);
-        Buttons.SetActive(false);
+        //Buttons.SetActive(false);
         StartCoroutine("ExitShop2");
     }
 
@@ -100,7 +100,7 @@ public class ObjectCollect : MonoBehaviour
         }
 
         imageTwo.color = new Color32(255, 255, 225, 100);
-        Buttons.SetActive(false);
+        //Buttons.SetActive(false);
         StartCoroutine("ExitShop3");
     }
 
