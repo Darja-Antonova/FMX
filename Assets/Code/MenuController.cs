@@ -14,11 +14,13 @@ public class MenuController : MonoBehaviour
 
     public void OpenOptionsMenu()
     {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.buttonSFX);
         StartCoroutine(TransitionMenus(mainMenu, optionsMenu));
     }
 
     public void BackToMainMenu()
     {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.buttonSFX);
         StartCoroutine(TransitionMenus(optionsMenu, mainMenu));
     }
 

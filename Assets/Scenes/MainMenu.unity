@@ -883,13 +883,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   musicSource: {fileID: 434422350}
   sfxSource: {fileID: 434422351}
-  menuMusic: {fileID: 0}
-  backgroundMusic: {fileID: 0}
-  jumpSFX: {fileID: 0}
-  collectibleSFX: {fileID: 0}
-  dashSFX: {fileID: 0}
-  runSFX: {fileID: 0}
-  healingSFX: {fileID: 0}
+  menuMusic: {fileID: 8300000, guid: c2bc02494152254429b7560233edbcfa, type: 3}
+  backgroundMusic: {fileID: 8300000, guid: c2bc02494152254429b7560233edbcfa, type: 3}
+  WalkSFX: {fileID: 8300000, guid: b225cd8585241894ea58f645eaaa6069, type: 3}
+  buttonSFX: {fileID: 8300000, guid: e016a7886ed7f924182111d57b275e53, type: 3}
+  cauldronBubbleSFX: {fileID: 8300000, guid: 9d38fd48c632b874cba80a8f9cceca34, type: 3}
+  cauldronDropSFX: {fileID: 8300000, guid: b4594dd71a97c374a9ee7373fd62de76, type: 3}
+  BFDialogue1: {fileID: 8300000, guid: ef1f00fa611a5c84ead0688abe9f7f8f, type: 3}
+  WitchDialogue1: {fileID: 8300000, guid: 76a4ab5f19525454cbe9cfbf7ae1a34a, type: 3}
+  WitchDialogue2: {fileID: 8300000, guid: f27fa51a9b5a104409e3978f22c41f20, type: 3}
+  GirlDialogue1: {fileID: 8300000, guid: b6743a1352c6f754e99acd41f7bea0f4, type: 3}
+  GirlDialogue2: {fileID: 8300000, guid: 8ffe689a2c1b33b4c836e487ccd60917, type: 3}
+  GirlDialogue3: {fileID: 8300000, guid: 94147a20fa67cb848b4e3fe9f9abeb8e, type: 3}
 --- !u!82 &434422350
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1407,13 +1412,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 132843787}
   m_HandleRect: {fileID: 46855136}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.0001
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 288145210}
+        m_TargetAssemblyTypeName: VolumeSettings, Assembly-CSharp
+        m_MethodName: SetSFXVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &631506911
 GameObject:
   m_ObjectHideFlags: 0
@@ -1933,13 +1950,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 1332971255}
   m_HandleRect: {fileID: 1680442549}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.0001
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 288145210}
+        m_TargetAssemblyTypeName: VolumeSettings, Assembly-CSharp
+        m_MethodName: SetMusicVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1049321182
 GameObject:
   m_ObjectHideFlags: 0

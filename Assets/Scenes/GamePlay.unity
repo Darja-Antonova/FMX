@@ -405,13 +405,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
   speech:
   - " So you\u2019re looking for a witch, huh? My Name is Agatha Ironwood, but you
-    can call me AI!\r\nYou look terribly lonely, that\u2019 right?"
-  - " Ive got just the thing for you, a perfect virtual boyfriend. \r\nYa\u2019 interested?
-    AH, of course you are!"
-  - "Just tell me what you want in a partner.\r\nThen write down your wishes, too
-    em into the cauldron and puff! You won\u2019t be lonely anymore.\r\n"
-  - "Yes, yes, it\u2019s easy! Visit the 3 stores down the road and select what you
-    want in your partner. Then just continue down the path!"
+    can call me AI!\r\nYou look terribly lonely, that right?"
+  - " I've got just the thing for you, the perfect boyfriend. Well... virtual boyfriend.\r\nYa\u2019
+    interested? Ah, of course you are."
+  - "Just tell me what you want in a partner.\r\nThen write down your wishes, through
+    'em into the cauldron and poof! You won\u2019t be lonely anymore.\r\n"
+  - "Yes, yes, it\u2019s easy! Simply visit the 3 stores down the road and select
+    what you want in your partner. Then continue down the path till you see an oversized
+    pot! "
   textSpeed: 0.03
   speechText: {fileID: 1582867414}
   textBox: {fileID: 307291239}
@@ -2193,7 +2194,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   speed: 5
-  jumpForce: 7
   groundCheck: {fileID: 757217041}
   groundCheckDistance: 0.12
   groundCheckOffset: {x: 0, y: -0.5}
@@ -2202,9 +2202,6 @@ MonoBehaviour:
     m_Bits: 64
   isInteracting: 0
   rb: {fileID: 1083380083}
-  fallMult: 3
-  smallJumpMult: 2
-  jumpDelay: 0.25
   MoveAction:
     m_Name: Move
     m_Type: 0

@@ -5,7 +5,6 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 8f;
-    public float jumpForce = 12f;
     public Transform groundCheck;
     public float groundCheckDistance = 0.12f;
     public Vector2 groundCheckOffset = new Vector2(0f, -0.5f);
@@ -17,12 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private float horizInput;
     private bool isGrounded;
     private Animator animator;
-
-    public float fallMult = 2.5f;
-    public float smallJumpMult = 2f;
     private float gravity;
-    public float jumpDelay = 0.25f;
-    private float jumpTimer;
 
     public InputAction MoveAction;
     public InputAction InteractAction;
@@ -73,14 +67,9 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine("Interacting");
         }
 
-        //Update animator parameters
-        /*if (animator != null)
-        {
-            animator.SetFloat("MoveInput", Mathf.Abs(horizInput));
-            animator.SetBool("IsGrounded", isGrounded);
-            animator.SetBool("IsDashing", isDashing);
-            animator.SetBool("HasJumped", hasBeenInAir);
-        } */
+        bool isMoving = isGrounded && Mathf.Abs(moveInput.x) > 0.1f;
+
+        AudioManager.Instance.PlayWalk(isMoving);
     }
 
     void FixedUpdate()
@@ -88,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = new Vector2(horizInput * speed, rb.linearVelocity.y);
     }
 
-    void OnDrawGizmosSelected()
+        void OnDrawGizmosSelected()
     {
         if (groundCheck != null)
         {

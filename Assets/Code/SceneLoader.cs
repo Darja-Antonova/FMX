@@ -5,6 +5,7 @@ public class SceneLoader : MonoBehaviour
 {
     public void LoadScene(string sceneName)
     {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.buttonSFX);
         Time.timeScale = 1f;
         SceneManager.LoadScene(sceneName);
     }
@@ -17,6 +18,7 @@ public class SceneLoader : MonoBehaviour
 
     public void QuitGame()
     {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.buttonSFX);
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else

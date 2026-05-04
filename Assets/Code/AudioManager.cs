@@ -12,11 +12,16 @@ public class AudioManager : MonoBehaviour
     [Header("Audio Clips")]
     public AudioClip menuMusic;
     public AudioClip backgroundMusic;
-    public AudioClip jumpSFX; //Delayed
-    public AudioClip collectibleSFX;
-    public AudioClip dashSFX; //Delayed
-    public AudioClip runSFX; //Need to add in
-    public AudioClip healingSFX; //Try stop the overlapping O.O
+    public AudioClip WalkSFX; 
+    public AudioClip buttonSFX;
+    public AudioClip cauldronBubbleSFX; 
+    public AudioClip cauldronDropSFX;
+    public AudioClip BFDialogue1;
+    public AudioClip WitchDialogue1;
+    public AudioClip WitchDialogue2;
+    public AudioClip GirlDialogue1;
+    public AudioClip GirlDialogue2;
+    public AudioClip GirlDialogue3;
 
     private void Awake()
     {
@@ -44,7 +49,7 @@ public class AudioManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "Main Menu" || scene.name == "Ending")
+        if (scene.name == "Main Menu")
         {
             PlayMusic(menuMusic);
         }
@@ -83,5 +88,19 @@ public class AudioManager : MonoBehaviour
     {
         sfxSource.loop = false;
         sfxSource.Stop();
+    }
+
+    public void PlayWalk(bool isWalking)
+    {
+        if (isWalking && !sfxSource.isPlaying)
+        {
+            sfxSource.clip = WalkSFX;
+            sfxSource.loop = true;
+            sfxSource.Play();
+        }
+        else if (!isWalking && sfxSource.isPlaying)
+        {
+            sfxSource.Stop();
+        }
     }
 }
