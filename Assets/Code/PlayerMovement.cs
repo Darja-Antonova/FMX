@@ -70,6 +70,7 @@ public class PlayerMovement : MonoBehaviour
         bool isMoving = isGrounded && Mathf.Abs(moveInput.x) > 0.1f;
 
         AudioManager.Instance.PlayWalk(isMoving);
+        animator.SetBool("isMoving", isMoving);
     }
 
     void FixedUpdate()

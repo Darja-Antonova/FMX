@@ -269,6 +269,7 @@ GameObject:
   m_Component:
   - component: {fileID: 269915813}
   - component: {fileID: 269915812}
+  - component: {fileID: 269915814}
   m_Layer: 0
   m_Name: Witch
   m_TagString: Untagged
@@ -351,6 +352,28 @@ Transform:
   - {fileID: 1299956537}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &269915814
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269915811}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 730158f3923c2dd44993f769addbd22a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &307291236
 GameObject:
   m_ObjectHideFlags: 0
@@ -2099,6 +2122,7 @@ GameObject:
   - component: {fileID: 1083380084}
   - component: {fileID: 1083380083}
   - component: {fileID: 1083380082}
+  - component: {fileID: 1083380085}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2396,6 +2420,28 @@ CapsuleCollider2D:
   m_Offset: {x: -0.013156891, y: -0.009877443}
   m_Size: {x: 0.92106056, y: 1.7284441}
   m_Direction: 0
+--- !u!95 &1083380085
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083380079}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: be84c773604333148ac1911a91fec9a1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1125988706
 GameObject:
   m_ObjectHideFlags: 0
@@ -4980,15 +5026,15 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.39270836
     y: 0
-    width: 1
-    height: 1
+    width: 0.6592593
+    height: 0.65925926
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.21875
+  orthographic size: 11
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
