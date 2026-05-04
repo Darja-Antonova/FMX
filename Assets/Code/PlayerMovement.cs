@@ -25,7 +25,6 @@ public class PlayerMovement : MonoBehaviour
     private float jumpTimer;
 
     public InputAction MoveAction;
-    public InputAction JumpAction;
     public InputAction InteractAction;
 
     private float smoothedInput;
@@ -33,14 +32,12 @@ public class PlayerMovement : MonoBehaviour
     void OnEnable()
     {
         MoveAction.Enable();
-        JumpAction.Enable();
         InteractAction.Enable();
     }
 
     void OnDisable()
     {
         MoveAction.Disable();
-        JumpAction.Disable();
         InteractAction.Disable();
     }
 
@@ -71,12 +68,6 @@ public class PlayerMovement : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, groundCheckDistance, groundLayer);
         isGrounded = hit.collider != null;
 
-        if (JumpAction.WasPressedThisFrame())
-        {
-            //AudioManager.Instance.PlaySFX(AudioManager.Instance.jumpSFX);
-            jumpTimer = Time.time + jumpDelay;
-        }
-
         if (InteractAction.WasPressedThisFrame())
         {
             StartCoroutine("Interacting");
@@ -94,26 +85,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (rb.linearVelocity.y < 0)
-        {
-            rb.gravityScale = gravity * fallMult;
-        }
-        else if (rb.linearVelocity.y > 0 && !JumpAction.IsPressed())
-        {
-            rb.gravityScale = gravity * smallJumpMult;
-        }
-        else
-        {
-            rb.gravityScale = gravity;
-        }
-
         rb.linearVelocity = new Vector2(horizInput * speed, rb.linearVelocity.y);
-
-        if (jumpTimer > Time.time && isGrounded)
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            jumpTimer = 0;
-        }
     }
 
     void OnDrawGizmosSelected()

@@ -2310,31 +2310,6 @@ MonoBehaviour:
       m_Action: Move
       m_Flags: 8
     m_Flags: 0
-  JumpAction:
-    m_Name: Jump
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 1db4c7bb-05a5-4a9b-9269-d045af209b5e
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 6202f76f-1e40-4ccb-be2f-47cde0f216ef
-      m_Path: <Keyboard>/space
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Jump
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 8e413c1b-8bab-4c6e-a090-5f32f6665adf
-      m_Path: <Gamepad>/buttonEast
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Jump
-      m_Flags: 0
-    m_Flags: 0
   InteractAction:
     m_Name: Interact
     m_Type: 0
@@ -5016,7 +4991,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 11
+  orthographic size: 4.21875
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
